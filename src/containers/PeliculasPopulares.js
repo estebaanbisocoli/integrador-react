@@ -53,7 +53,7 @@ class PeliculasFavoritas extends Component {
     return (
       <Section
         sectionTitle={this.props.sectionTitle}
-        movies={this.props.movies}
+        items={this.props.movies}
         link={this.props.link}
         loading={this.props.loading}
         error={this.props.error}

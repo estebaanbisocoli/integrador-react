@@ -26,7 +26,8 @@ const MyContainer = styled(Container)`
   * url
   * movieId
 */
-const Section = ({ sectionTitle, link, movies, loading, error }) => {
+const Section = ({ sectionTitle, link, items, loading, error }) => {
+  global.items = items;
   return (
     <MyContainer link={link}>
       <SectionHeader title={sectionTitle} link={link} />
@@ -34,7 +35,7 @@ const Section = ({ sectionTitle, link, movies, loading, error }) => {
       <Grid textAlign="center" doubling={true} columns={6}>
         {loading && <SectionLoading />}
         {error && error}
-        {movies !== [] && movies.map(mapMovies)}
+        {items !== [] && items.map(mapMovies)}
       </Grid>
     </MyContainer>
   );

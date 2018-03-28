@@ -33,6 +33,7 @@ const getMovieInfo = movieId => {
 const getRecommendation = movieId => {
   return axiosInstace.get(`/movie/${movieId}/recommendations`);
 };
+
 export {
   getPopularMovies,
   getRecommendation,
